@@ -1,0 +1,88 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+header{
+    background: variaveis.$gradiente-primario;
+    padding: 2rem;
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+        .linha {
+            border-top: 1px solid black;
+            width: 80%;
+        }
+        ul{
+            display: inline-flex;
+            gap: 2rem;
+        
+            li{
+                list-style-type: none;
+            }
+
+            a{
+                text-decoration: none;
+                color:variaveis.$cor-primaria;
+                font-weight: 500;
+                font-family: variaveis.$ft-textos;
+                
+                &:hover{
+                    font-weight: 800;
+                }
+    
+           
+            }
+           
+
+        }
+
+    }
+
+    #home {
+        max-width: 1040px;
+      @include mixins.margem-central(80%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .textos-home{
+            max-width: 500px;
+            h1{
+                font-size: 42px;
+                color: variaveis.$cor-primaria;
+                margin-bottom: 2rem;
+                font-family:variaveis.$ft-titulos;
+                span{
+                    color: variaveis.$cor-secundaria;
+                }
+            }
+        }
+
+        .img-home{
+            max-width: 450px;
+            width: 100%;
+        }
+        img{
+            width: 500px;
+        }
+
+        .btn-main{
+            border: 1px solid variaveis.$cor-terciaria;
+            background-color: variaveis.$cor-terciaria;
+            border-radius: 30px;
+            width: 60%;
+            height: 4rem;
+            font-size: 22px;
+            color: variaveis.$cor-default;
+            font-family: variaveis.$ft-textos;
+            font-weight: 700;
+
+            &:hover{
+                cursor: pointer;
+                background-color: variaveis.$cor-secundaria;
+            }
+        }
+
+    }
+}
